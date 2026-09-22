@@ -44,49 +44,54 @@ const summarize = (value = '', maxLength = 96) => {
 }
 
 const fetchHsinchuPageMedia = async () => {
-  const pages = await Promise.all([0, 1, 2].map(async (page) => {
-    const body = new URLSearchParams({
-      dataClass: '',
-      keyword: '',
-      page: String(page),
-      pageSize: '100',
-    })
+  try {
+    const pages = await Promise.all([0, 1, 2].map(async (page) => {
+      const body = new URLSearchParams({
+        dataClass: '',
+        keyword: '',
+        page: String(page),
+        pageSize: '100',
+      })
 
-    const response = await fetch(HSINCHU_TOURISM_QUERY, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/x-www-form-urlencoded',
-        'user-agent': 'Mozilla/5.0 (compatible; HsinchuCityGuide/1.0)',
-      },
-      body,
-    })
+      const response = await fetch(HSINCHU_TOURISM_QUERY, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/x-www-form-urlencoded',
+          'user-agent': 'Mozilla/5.0 (compatible; HsinchuCityGuide/1.0)',
+        },
+        body,
+      })
 
-    if (!response.ok) {
-      throw new Error(`Hsinchu tourism website responded with ${response.status}`)
-    }
+      if (!response.ok) {
+        throw new Error(`Hsinchu tourism website responded with ${response.status}`)
+      }
 
-    return response.text()
-  }))
+      return response.text()
+    }))
 
-  const media = new Map()
-  const itemPattern = /<a href="([^"]*\/chtravel\/app\/travel\/view[^"]*)"[^>]*>[\s\S]*?<img[^>]+src="([^"]*\/chtravel\/app\/data\/image[^"]*)"[^>]*>[\s\S]*?<p class="subject">([\s\S]*?)<\/p>/gi
+    const media = new Map()
+    const itemPattern = /<a href="([^"]*\/chtravel\/app\/travel\/view[^"]*)"[^>]*>[\s\S]*?<img[^>]+src="([^"]*\/chtravel\/app\/data\/image[^"]*)"[^>]*>[\s\S]*?<p class="subject">([\s\S]*?)<\/p>/gi
 
-  for (const html of pages) {
-    for (const match of html.matchAll(itemPattern)) {
-      const name = match[3].replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/gi, ' ').replace(/\s+/g, ' ').trim()
-      const imagePath = match[2]
-      const websitePath = match[1]
+    for (const html of pages) {
+      for (const match of html.matchAll(itemPattern)) {
+        const name = match[3].replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/gi, ' ').replace(/\s+/g, ' ').trim()
+        const imagePath = match[2]
+        const websitePath = match[1]
 
-      if (name && imagePath) {
-        media.set(name, {
-          image: new URL(imagePath, HSINCHU_TOURISM_ORIGIN).href,
-          website: new URL(websitePath, HSINCHU_TOURISM_ORIGIN).href,
-        })
+        if (name && imagePath) {
+          media.set(name, {
+            image: new URL(imagePath, HSINCHU_TOURISM_ORIGIN).href,
+            website: new URL(websitePath, HSINCHU_TOURISM_ORIGIN).href,
+          })
+        }
       }
     }
-  }
 
-  return media
+    return media
+  } catch (error) {
+    console.warn(`Unable to fetch Hsinchu tourism images: ${error.message}`)
+    return new Map()
+  }
 }
 
 const buildItem = (item, kind, overrideImage = '') => {
