@@ -1,0 +1,25 @@
+{
+  "name": "hsinchu-city-vision-exhibition",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate:data": "node scripts/generate-tourism-data.mjs",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@lucide/vue": "^1.47.0",
+    "@tailwindcss/vite": "^4.1.0",
+    "fflate": "^0.8.3",
+    "nuxt": "^4.0.0",
+    "qrcode.vue": "^3.11.0",
+    "tailwindcss": "^4.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vue-tsc": "^2.2.0"
+  }
+}

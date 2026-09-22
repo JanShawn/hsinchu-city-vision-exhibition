@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="title desc">
+  <title id="title">官方影像暫時無法載入</title>
+  <desc id="desc">深色中性背景與資料庫線條符號</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102833"/>
+      <stop offset="1" stop-color="#071219"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="640" fill="url(#background)"/>
+  <g fill="none" stroke="#67e8d5" stroke-width="10" opacity="0.7">
+    <ellipse cx="480" cy="252" rx="78" ry="30"/>
+    <path d="M402 252v90c0 17 35 30 78 30s78-13 78-30v-90"/>
+    <path d="M402 297c0 17 35 30 78 30s78-13 78-30"/>
+  </g>
+  <text x="480" y="440" fill="#e9f3f4" font-family="Microsoft JhengHei, sans-serif" font-size="28" text-anchor="middle">官方影像暫時無法載入</text>
+  <text x="480" y="480" fill="#8ba4aa" font-family="Arial, sans-serif" font-size="18" letter-spacing="4" text-anchor="middle">OFFICIAL IMAGE UNAVAILABLE</text>
+</svg>
