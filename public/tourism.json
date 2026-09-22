@@ -2,7 +2,7 @@
   "meta": {
     "source": "交通部觀光署・觀光資訊資料庫 V2.1",
     "sourceUrl": "https://data.gov.tw/dataset/7777",
-    "fetchedAt": "2026-09-22T03:42:56.488Z",
+    "fetchedAt": "2026-09-22T03:48:02.421Z",
     "attractionUpdatedAt": "2026-09-22T02:30:03+08:00",
     "restaurantUpdatedAt": "2026-09-22T02:30:22+08:00",
     "warnings": []
@@ -1274,7 +1274,7 @@
       "name": "柚子 Pomelo's Home",
       "summary": "護河城河畔優質創意定食料理位在美麗的新竹護城河畔的 #柚子 Pomelo's Home，算是市區內風景宜人的地區，純白色的外觀，以及大片的玻璃，logo是可愛的鮮檸檬黃柚子一顆，店內裝潢是白色…",
       "description": "護河城河畔優質創意定食料理位在美麗的新竹護城河畔的 #柚子 Pomelo's Home，算是市區內風景宜人的地區，純白色的外觀，以及大片的玻璃，logo是可愛的鮮檸檬黃柚子一顆，店內裝潢是白色與木紋做搭配，另外隨處可見的花藝品及小物，餐廳使用了大量的實木及暖色照明，就是很日式居家舒適的用餐環境，處處可以感受到店家的用心。店內餐點由日本知名料理家親自指導，菜餚透出強烈日本風味，定食均附麥飯、味噌湯、三樣自家製小菜，每款定食都有不同的特色，至於飲品與甜點部份要另外加點，從店面裝潢到餐點都充滿日式家庭風格，餐具選用日本九州瓷器做為餐具，當然也有做販售喔！#薑汁燒肉日本每位媽媽的拿手料理，醬汁中加入薑汁，但沒有薑汁的辛辣味，說不上「嘩！超好吃」，但是帶有一種思念溫暖的家庭味。#酥炸雞柳外酥內嫩的酥炸雞柳，可以選擇「柚子自慢」塔塔醬或秘製淋醬，我選擇口味較重的秘製淋醬，帶有一點點照燒的口味。#自家製氣泡飲清爽的氣泡飲，味道像是酸甜的蘋果醋，瞬間消除餐間的油膩感。",
-      "image": "/tourism-images/fallback.svg",
+      "image": "/image-unavailable.svg",
       "imageAlt": "柚子 Pomelo's Home",
       "town": "東區",
       "address": "新竹市東區新竹市東區文化街84號",
@@ -2379,7 +2379,7 @@
       "name": "FOX.CONE coffee & bakes",
       "summary": "",
       "description": "",
-      "image": "/tourism-images/fallback.svg",
+      "image": "/image-unavailable.svg",
       "imageAlt": "FOX.CONE coffee & bakes",
       "town": "東區",
       "address": "新竹市東區新竹市南門街12號",

@@ -9,7 +9,7 @@ const API_URLS = {
 const OUTPUT_DIR = 'public'
 const HSINCHU_TOURISM_ORIGIN = 'https://tourism.hccg.gov.tw'
 const HSINCHU_TOURISM_QUERY = `${HSINCHU_TOURISM_ORIGIN}/chtravel/app/travel/query?module=travel&id=37`
-const FALLBACK_IMAGE_PATH = '/tourism-images/fallback.svg'
+const FALLBACK_IMAGE_PATH = '/image-unavailable.svg'
 
 const fetchZipJson = async (url, expectedFile) => {
   const response = await fetch(url, {
