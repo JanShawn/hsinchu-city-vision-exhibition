@@ -154,7 +154,7 @@ for (const item of uniqueItems) {
   })
 
   const imageUrl = hsinchuMedia.get(item.name)?.image || sourceItem?.Images?.[0]?.URL || ''
-  if (!imageUrl) {
+  if (!imageUrl || imageUrl.includes('hsinchuemap.tw')) {
     item.image = FALLBACK_IMAGE_PATH
     continue
   }
