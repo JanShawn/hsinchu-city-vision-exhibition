@@ -78,6 +78,8 @@ const foodPage = ref(0)
 
 const tourismBaseUrl = (useRuntimeConfig().app.baseURL || '/').replace(/\/$/, '')
 const tourismDataUrl = `${tourismBaseUrl}/tourism.json`
+const heroImageUrl = `${tourismBaseUrl}/city-hall-photo-1.jpg`
+const heroBackgroundImage = computed(() => `linear-gradient(90deg, rgba(4, 13, 21, 0.98) 0%, rgba(4, 13, 21, 0.78) 42%, rgba(4, 13, 21, 0.12) 100%), url("${heroImageUrl}")`)
 
 const {data, status, error, refresh} = useFetch<TourismResponse>(
   tourismDataUrl,
@@ -172,16 +174,26 @@ const visibleRestaurants = computed(() =>
   filteredRestaurants.value.slice(foodPage.value * 6, foodPage.value * 6 + 6),
 )
 
-const featuredStories = computed(() =>
-  [
+const featuredStories = ref<TourismItem[]>([])
+
+const refreshFeaturedStories = () => {
+  const government =
     attractions.value.find((item) => item.name === '新竹市政府(新竹州廳)') ||
-      attractions.value[0],
-    restaurants.value.find((item) => item.name === '葉大粒粉圓') ||
-      restaurants.value[0],
-    attractions.value.find((item) => item.name === '新竹漁港') ||
-      attractions.value[1],
-  ].filter((item): item is TourismItem => Boolean(item)),
-)
+    attractions.value[0]
+  const otherAttractions = attractions.value.filter(
+    (item) => item.id !== government?.id,
+  )
+  const randomAttraction =
+    otherAttractions[Math.floor(Math.random() * otherAttractions.length)]
+  const randomRestaurant =
+    restaurants.value[Math.floor(Math.random() * restaurants.value.length)]
+
+  featuredStories.value = [government, randomRestaurant, randomAttraction].filter(
+    (item): item is TourismItem => Boolean(item),
+  )
+}
+
+watch([attractions, restaurants], refreshFeaturedStories, {immediate: true})
 
 const routeDefinitions = [
   {
@@ -393,6 +405,7 @@ const updateScale = () => {
 
 const setScreen = (screen: Screen) => {
   currentScreen.value = screen
+  if (screen === 'home') refreshFeaturedStories()
   activeTown.value = '全部'
   attractionPage.value = 0
   foodPage.value = 0
@@ -437,6 +450,7 @@ const handleImageError = (event: Event, _kind: TourismKind) => {
 
 onMounted(() => {
   restoreVisionVotes()
+  refreshFeaturedStories()
   updateScale()
   window.addEventListener('resize', updateScale)
 })
@@ -454,6 +468,7 @@ onBeforeUnmount(() => {
         <section
           v-if="currentScreen === 'home'"
           class="screen home-screen hero-artwork"
+          :style="{backgroundImage: heroBackgroundImage}"
         >
           <div class="home-content">
             <div class="home-intro">
@@ -845,11 +860,8 @@ onBeforeUnmount(() => {
             :class="{active: currentScreen === item.id}"
             @click="setScreen(item.id)"
           >
-            <component :is="item.icon" :size="21" />
-            <span
-              ><strong>{{ item.label }}</strong
-              ><small>{{ item.sub }}</small></span
-            >
+            <component :is="item.icon" :size="24" />
+            <span><strong>{{ item.label }}</strong></span>
           </button>
         </nav>
 

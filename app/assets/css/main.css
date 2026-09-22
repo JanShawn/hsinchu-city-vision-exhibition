@@ -159,9 +159,24 @@ a:focus-visible {
   transition: 180ms ease;
 }
 
+.primary-action svg {
+  animation: explore-arrow 2.2s ease-in-out infinite;
+  transition: transform 180ms ease;
+}
+
 .primary-action:hover {
   background: rgba(32, 111, 105, 0.68);
   transform: translateY(-2px);
+}
+
+.primary-action:hover svg {
+  animation-play-state: paused;
+  transform: translateX(5px);
+}
+
+@keyframes explore-arrow {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
 }
 
 .live-stats {
@@ -2006,4 +2021,150 @@ a:focus-visible {
 
 .routes-screen .stop-preview {
   margin-top: 16px;
+}
+/* Exhibition readability pass */
+.exhibit-canvas {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.eyebrow { font-size: 14px; }
+.live-stats span,
+.section-label,
+.story-copy small,
+.story-copy b { font-size: 14px; }
+.story-copy > span {
+  color: #d5e1e3;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.data-credit {
+  color: rgba(229, 240, 241, 0.8);
+  font-size: 12px;
+}
+.screen-heading h2 span { font-size: 18px; }
+
+.filter-row button {
+  min-height: 44px;
+  font-size: 16px;
+}
+.place-image small {
+  padding: 7px 10px;
+  font-size: 14px;
+}
+.content-screen:not(.vision-screen):not(.routes-screen) .place-image {
+  height: 145px;
+}
+.content-screen:not(.vision-screen):not(.routes-screen) .place-body {
+  padding: 13px 17px 10px;
+}
+.place-body strong { font-size: 20px; }
+.content-screen:not(.vision-screen):not(.routes-screen) .place-body > span {
+  height: 54px;
+  color: #c5d3d6;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.content-screen:not(.vision-screen):not(.routes-screen) .place-body b {
+  min-height: 26px;
+  padding-top: 8px;
+  font-size: 15px;
+}
+.page-controls span { font-size: 14px; }
+
+.route-time,
+.route-body > small { font-size: 14px; }
+.routes-screen .route-body > small {
+  height: 22px;
+  line-height: 22px;
+}
+.routes-screen .route-body > span:not(.stop-preview):not(.route-link) {
+  height: 78px;
+  color: #cad6d9;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.routes-screen .stop-preview b { font-size: 15px; }
+.stop-preview em {
+  color: #aebfc3;
+  font-size: 14px;
+}
+.route-link { font-size: 16px; }
+.route-note {
+  color: #afc0c4;
+  font-size: 14px;
+}
+
+.vision-option-heading small {
+  color: #c2d0d3;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.vision-options .vision-vote-button { font-size: 16px; }
+.vision-vote-stats small,
+.vision-vote-stats em { font-size: 14px; }
+.collective-score > span { font-size: 14px; }
+.vision-result-copy > small { font-size: 14px; }
+.vision-result-copy p {
+  color: #c3d0d3;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.momentum-column small {
+  color: #b8c7ca;
+  font-size: 14px;
+}
+.recipe-legend span {
+  color: #bdcacc;
+  font-size: 14px;
+}
+.vision-note {
+  color: #a8b9bd;
+  font-size: 13px;
+}
+
+.bottom-nav button {
+  color: #8ea5ab;
+  gap: 13px;
+}
+.bottom-nav button > span {
+  align-items: center;
+}
+.bottom-nav strong { font-size: 17px; }
+
+.detail-image span,
+.detail-copy dt,
+.detail-copy > a { font-size: 14px; }
+.detail-description {
+  height: 123px;
+  max-height: 123px;
+  flex: none;
+  color: #d2dee0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+.detail-copy dd { font-size: 15px; }
+.detail-source,
+.route-detail-source {
+  color: #a2b3b7;
+  font-size: 12px;
+}
+.route-detail-heading > span { font-size: 14px; }
+.route-detail-heading p {
+  color: #cad6d9;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.route-detail-heading b { font-size: 16px; }
+.stop-index { font-size: 14px; }
+.route-stops strong { font-size: 16px; }
+.route-stops small {
+  color: #afbec2;
+  font-size: 13px;
+}
+.qr-takeaway strong { font-size: 16px; }
+.qr-takeaway span { font-size: 15px; }
+.qr-takeaway small {
+  color: #a3b5b9;
+  font-size: 14px;
 }
