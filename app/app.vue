@@ -76,10 +76,16 @@ const activeTown = ref('全部')
 const attractionPage = ref(0)
 const foodPage = ref(0)
 
-const tourismBaseUrl = (useRuntimeConfig().app.baseURL || '/').replace(/\/$/, '')
+const tourismBaseUrl = (useRuntimeConfig().app.baseURL || '/').replace(
+  /\/$/,
+  '',
+)
 const tourismDataUrl = `${tourismBaseUrl}/tourism.json`
-const heroImageUrl = `${tourismBaseUrl}/city-hall-photo-1.jpg`
-const heroBackgroundImage = computed(() => `linear-gradient(90deg, rgba(4, 13, 21, 0.98) 0%, rgba(4, 13, 21, 0.78) 42%, rgba(4, 13, 21, 0.12) 100%), url("${heroImageUrl}")`)
+const heroImageUrl = `${tourismBaseUrl}/city.jpg`
+const heroBackgroundImage = computed(
+  () =>
+    `linear-gradient(90deg, rgba(4, 13, 21, 0.98) 0%, rgba(4, 13, 21, 0.78) 42%, rgba(4, 13, 21, 0.12) 100%), url("${heroImageUrl}")`,
+)
 
 const {data, status, error, refresh} = useFetch<TourismResponse>(
   tourismDataUrl,
@@ -188,9 +194,11 @@ const refreshFeaturedStories = () => {
   const randomRestaurant =
     restaurants.value[Math.floor(Math.random() * restaurants.value.length)]
 
-  featuredStories.value = [government, randomRestaurant, randomAttraction].filter(
-    (item): item is TourismItem => Boolean(item),
-  )
+  featuredStories.value = [
+    government,
+    randomRestaurant,
+    randomAttraction,
+  ].filter((item): item is TourismItem => Boolean(item))
 }
 
 watch([attractions, restaurants], refreshFeaturedStories, {immediate: true})
@@ -861,7 +869,9 @@ onBeforeUnmount(() => {
             @click="setScreen(item.id)"
           >
             <component :is="item.icon" :size="24" />
-            <span><strong>{{ item.label }}</strong></span>
+            <span
+              ><strong>{{ item.label }}</strong></span
+            >
           </button>
         </nav>
 
