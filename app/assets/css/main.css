@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --ink: #050d15;
@@ -29,7 +29,7 @@ body,
 body,
 button,
 a {
-  font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', system-ui, sans-serif;
 }
 
 button,
@@ -54,7 +54,11 @@ a:focus-visible {
   place-items: center;
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 12%, rgba(53, 102, 121, 0.18), transparent 38%),
+    radial-gradient(
+      circle at 50% 12%,
+      rgba(53, 102, 121, 0.18),
+      transparent 38%
+    ),
     #02070b;
 }
 
@@ -101,8 +105,13 @@ a:focus-visible {
   z-index: -1;
   background:
     linear-gradient(180deg, rgba(3, 11, 18, 0.08), rgba(3, 11, 18, 0.4)),
-    radial-gradient(circle at 48% 47%, transparent, rgba(2, 8, 12, 0.24) 56%, rgba(2, 8, 12, 0.7));
-  content: "";
+    radial-gradient(
+      circle at 48% 47%,
+      transparent,
+      rgba(2, 8, 12, 0.24) 56%,
+      rgba(2, 8, 12, 0.7)
+    );
+  content: '';
 }
 
 .home-content {
@@ -122,7 +131,7 @@ a:focus-visible {
 
 .home-intro h1 {
   margin: 24px 0 18px;
-  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', serif;
   font-size: 58px;
   font-weight: 700;
   letter-spacing: -0.055em;
@@ -175,8 +184,13 @@ a:focus-visible {
 }
 
 @keyframes explore-arrow {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(4px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
 }
 
 .live-stats {
@@ -270,7 +284,9 @@ a:focus-visible {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .story-grid {
@@ -317,11 +333,20 @@ a:focus-visible {
 .story-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(3, 12, 18, 0.94), rgba(3, 12, 18, 0.46) 66%, rgba(3, 12, 18, 0.1));
+  background: linear-gradient(
+    90deg,
+    rgba(3, 12, 18, 0.94),
+    rgba(3, 12, 18, 0.46) 66%,
+    rgba(3, 12, 18, 0.1)
+  );
 }
 
 .story-card:not(.featured) .story-shade {
-  background: linear-gradient(180deg, rgba(3, 12, 18, 0.04), rgba(3, 12, 18, 0.92) 68%);
+  background: linear-gradient(
+    180deg,
+    rgba(3, 12, 18, 0.04),
+    rgba(3, 12, 18, 0.92) 68%
+  );
 }
 
 .story-copy {
@@ -397,13 +422,21 @@ a:focus-visible {
 .content-screen {
   padding: 38px 44px 26px;
   background:
-    radial-gradient(circle at 90% -10%, rgba(69, 168, 163, 0.18), transparent 34%),
+    radial-gradient(
+      circle at 90% -10%,
+      rgba(69, 168, 163, 0.18),
+      transparent 34%
+    ),
     linear-gradient(145deg, #06121b, #07131b 48%, #040c12);
 }
 
 .food-screen {
   background:
-    radial-gradient(circle at 90% -10%, rgba(207, 140, 45, 0.18), transparent 34%),
+    radial-gradient(
+      circle at 90% -10%,
+      rgba(207, 140, 45, 0.18),
+      transparent 34%
+    ),
     linear-gradient(145deg, #151007, #0d1215 48%, #060c10);
 }
 
@@ -416,7 +449,7 @@ a:focus-visible {
 .screen-heading h2,
 .vision-intro h2 {
   margin: 8px 0 0;
-  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', serif;
   font-size: 37px;
   letter-spacing: -0.04em;
 }
@@ -424,7 +457,7 @@ a:focus-visible {
 .screen-heading h2 span {
   margin-left: 14px;
   color: #a6b8bd;
-  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.04em;
@@ -524,7 +557,7 @@ a:focus-visible {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, transparent 55%, rgba(4, 13, 18, 0.72));
-  content: "";
+  content: '';
 }
 
 .place-image img {
@@ -557,7 +590,6 @@ a:focus-visible {
 .place-card:hover img.image-quarter-turned {
   transform: translate(-50%, -50%) rotate(90deg) scale(1.04);
 }
-
 
 .place-image small {
   position: absolute;
@@ -644,13 +676,20 @@ a:focus-visible {
 .skeleton-card {
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: linear-gradient(110deg, rgba(20, 44, 53, 0.5) 25%, rgba(39, 69, 76, 0.64) 42%, rgba(20, 44, 53, 0.5) 58%);
+  background: linear-gradient(
+    110deg,
+    rgba(20, 44, 53, 0.5) 25%,
+    rgba(39, 69, 76, 0.64) 42%,
+    rgba(20, 44, 53, 0.5) 58%
+  );
   background-size: 200% 100%;
   animation: shimmer 1.4s infinite linear;
 }
 
 @keyframes shimmer {
-  to { background-position-x: -200%; }
+  to {
+    background-position-x: -200%;
+  }
 }
 
 .routes-screen {
@@ -703,8 +742,12 @@ a:focus-visible {
 .route-image::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(4, 12, 18, 0.02), rgba(4, 12, 18, 0.76));
-  content: "";
+  background: linear-gradient(
+    180deg,
+    rgba(4, 12, 18, 0.02),
+    rgba(4, 12, 18, 0.76)
+  );
+  content: '';
 }
 
 .route-image img {
@@ -763,7 +806,7 @@ a:focus-visible {
 
 .route-body > strong {
   margin-top: 7px;
-  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', serif;
   font-size: 25px;
 }
 
@@ -822,8 +865,16 @@ a:focus-visible {
 .vision-screen {
   padding: 48px 58px;
   background:
-    radial-gradient(circle at 72% 40%, rgba(103, 232, 213, 0.12), transparent 30%),
-    radial-gradient(circle at 92% 10%, rgba(174, 184, 255, 0.16), transparent 30%),
+    radial-gradient(
+      circle at 72% 40%,
+      rgba(103, 232, 213, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(174, 184, 255, 0.16),
+      transparent 30%
+    ),
     linear-gradient(145deg, #06121b, #071019 52%, #040b11);
 }
 
@@ -918,8 +969,12 @@ a:focus-visible {
   border: 1px solid rgba(174, 184, 255, 0.2);
   border-radius: 50% 50% 22px 22px;
   text-align: center;
-  background:
-    radial-gradient(circle, rgba(103, 232, 213, 0.2), rgba(40, 48, 92, 0.16) 40%, rgba(8, 20, 29, 0.84) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(103, 232, 213, 0.2),
+    rgba(40, 48, 92, 0.16) 40%,
+    rgba(8, 20, 29, 0.84) 70%
+  );
 }
 
 .vision-result > svg {
@@ -937,7 +992,7 @@ a:focus-visible {
 .vision-result h3 {
   max-width: 340px;
   margin: 13px 0 0;
-  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', serif;
   font-size: 26px;
   line-height: 1.45;
 }
@@ -965,8 +1020,14 @@ a:focus-visible {
   border-radius: 50%;
 }
 
-.orbit-one { width: 300px; height: 300px; }
-.orbit-two { width: 430px; height: 430px; }
+.orbit-one {
+  width: 300px;
+  height: 300px;
+}
+.orbit-two {
+  width: 430px;
+  height: 430px;
+}
 
 .vision-note {
   margin-top: 27px;
@@ -1014,13 +1075,17 @@ a:focus-visible {
   left: 0;
   height: 2px;
   background: transparent;
-  content: "";
+  content: '';
 }
 
 .bottom-nav button:hover,
 .bottom-nav button.active {
   color: var(--cyan);
-  background: linear-gradient(180deg, rgba(103, 232, 213, 0.09), transparent 70%);
+  background: linear-gradient(
+    180deg,
+    rgba(103, 232, 213, 0.09),
+    transparent 70%
+  );
 }
 
 .bottom-nav button.active::before {
@@ -1097,7 +1162,7 @@ a:focus-visible {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, transparent 60%, rgba(4, 13, 18, 0.68));
-  content: "";
+  content: '';
 }
 
 .detail-image img {
@@ -1128,7 +1193,7 @@ a:focus-visible {
 
 .detail-copy h2 {
   margin: 13px 0 0;
-  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', serif;
   font-size: 34px;
   line-height: 1.3;
 }
@@ -1209,7 +1274,11 @@ a:focus-visible {
   padding: 58px 32px 38px;
   border-right: 1px solid var(--line);
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--route-accent) 18%, transparent), transparent 65%),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--route-accent) 18%, transparent),
+      transparent 65%
+    ),
     #0b1922;
 }
 
@@ -1222,7 +1291,7 @@ a:focus-visible {
 
 .route-detail-heading h2 {
   margin: 12px 0 0;
-  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', serif;
   font-size: 34px;
 }
 
@@ -1367,7 +1436,11 @@ a:focus-visible {
   border: 1px solid color-mix(in srgb, var(--vision-accent) 20%, var(--line));
   border-radius: 20px;
   background:
-    linear-gradient(145deg, color-mix(in srgb, var(--vision-accent) 7%, transparent), transparent 55%),
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--vision-accent) 7%, transparent),
+      transparent 55%
+    ),
     rgba(11, 29, 39, 0.9);
 }
 
@@ -1474,21 +1547,35 @@ a:focus-visible {
   border-radius: 14px;
   color: #f7ffff;
   text-align: center;
-  background: color-mix(in srgb, var(--vision-accent) 14%, rgba(7, 18, 25, 0.96));
+  background: color-mix(
+    in srgb,
+    var(--vision-accent) 14%,
+    rgba(7, 18, 25, 0.96)
+  );
   font-size: 14px;
   font-weight: 800;
   transform: none;
-  transition: border-color 180ms ease, background 180ms ease;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
 }
 
 .vision-options .vision-vote-button:hover {
   border-color: var(--vision-accent);
-  background: color-mix(in srgb, var(--vision-accent) 24%, rgba(7, 18, 25, 0.96));
+  background: color-mix(
+    in srgb,
+    var(--vision-accent) 24%,
+    rgba(7, 18, 25, 0.96)
+  );
   transform: none;
 }
 
 .vision-options .vision-vote-button:active {
-  background: color-mix(in srgb, var(--vision-accent) 34%, rgba(7, 18, 25, 0.96));
+  background: color-mix(
+    in srgb,
+    var(--vision-accent) 34%,
+    rgba(7, 18, 25, 0.96)
+  );
 }
 
 .vision-result {
@@ -1504,7 +1591,11 @@ a:focus-visible {
   border: 1px solid rgba(174, 184, 255, 0.24);
   border-radius: 30px;
   background:
-    radial-gradient(circle at 50% 34%, rgba(103, 232, 213, 0.18), transparent 36%),
+    radial-gradient(
+      circle at 50% 34%,
+      rgba(103, 232, 213, 0.18),
+      transparent 36%
+    ),
     linear-gradient(180deg, rgba(15, 34, 47, 0.94), rgba(7, 19, 28, 0.96));
 }
 
@@ -1563,7 +1654,7 @@ a:focus-visible {
 
 .vision-result-copy h3 {
   margin: 7px 0 0;
-  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', serif;
   font-size: 22px;
   line-height: 1.35;
 }
@@ -1614,9 +1705,14 @@ a:focus-visible {
   overflow: hidden;
   align-items: flex-end;
   padding: 4px;
-  border: 1px solid color-mix(in srgb, var(--vision-accent) 18%, rgba(255, 255, 255, 0.06));
+  border: 1px solid
+    color-mix(in srgb, var(--vision-accent) 18%, rgba(255, 255, 255, 0.06));
   border-radius: 13px 13px 7px 7px;
-  background: color-mix(in srgb, var(--vision-accent) 6%, rgba(255, 255, 255, 0.025));
+  background: color-mix(
+    in srgb,
+    var(--vision-accent) 6%,
+    rgba(255, 255, 255, 0.025)
+  );
 }
 
 .momentum-track i {
@@ -1624,7 +1720,11 @@ a:focus-visible {
   width: 100%;
   min-height: 7px;
   border-radius: 9px 9px 4px 4px;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--vision-accent) 78%, white), var(--vision-accent));
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--vision-accent) 78%, white),
+    var(--vision-accent)
+  );
   box-shadow: 0 0 22px color-mix(in srgb, var(--vision-accent) 45%, transparent);
   transition: height 240ms ease;
 }
@@ -1748,7 +1848,15 @@ a:focus-visible {
   place-items: center;
   padding: 64px;
   background:
-    radial-gradient(circle at 50% 48%, color-mix(in srgb, var(--confirmation-accent, var(--cyan)) 13%, transparent), transparent 34%),
+    radial-gradient(
+      circle at 50% 48%,
+      color-mix(
+        in srgb,
+        var(--confirmation-accent, var(--cyan)) 13%,
+        transparent
+      ),
+      transparent 34%
+    ),
     rgba(1, 7, 11, 0.86);
   backdrop-filter: blur(15px);
 }
@@ -1761,11 +1869,20 @@ a:focus-visible {
   flex-direction: column;
   justify-content: center;
   padding: 48px 58px 42px;
-  border: 1px solid color-mix(in srgb, var(--confirmation-accent) 45%, rgba(255, 255, 255, 0.14));
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--confirmation-accent) 45%,
+      rgba(255, 255, 255, 0.14)
+    );
   border-radius: 34px;
   text-align: center;
   background:
-    radial-gradient(circle at 50% 26%, color-mix(in srgb, var(--confirmation-accent) 20%, transparent), transparent 32%),
+    radial-gradient(
+      circle at 50% 26%,
+      color-mix(in srgb, var(--confirmation-accent) 20%, transparent),
+      transparent 32%
+    ),
     linear-gradient(160deg, rgba(14, 37, 47, 0.98), rgba(6, 18, 27, 0.99));
   box-shadow: 0 34px 110px rgba(0, 0, 0, 0.62);
   animation: vote-card-arrive 260ms ease-out both;
@@ -1776,11 +1893,13 @@ a:focus-visible {
   width: 88px;
   height: 88px;
   place-items: center;
-  border: 1px solid color-mix(in srgb, var(--confirmation-accent) 58%, transparent);
+  border: 1px solid
+    color-mix(in srgb, var(--confirmation-accent) 58%, transparent);
   border-radius: 50%;
   color: #061218;
   background: var(--confirmation-accent);
-  box-shadow: 0 0 42px color-mix(in srgb, var(--confirmation-accent) 32%, transparent);
+  box-shadow: 0 0 42px
+    color-mix(in srgb, var(--confirmation-accent) 32%, transparent);
 }
 
 .vote-confirmation-card .eyebrow {
@@ -1790,7 +1909,7 @@ a:focus-visible {
 
 .vote-confirmation-card h2 {
   margin: 12px 0 0;
-  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', serif;
   font-size: 38px;
   line-height: 1.25;
 }
@@ -1866,13 +1985,23 @@ a:focus-visible {
 }
 
 @keyframes vote-card-arrive {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes vote-confirmation-countdown {
-  from { transform: scaleX(1); }
-  to { transform: scaleX(0); }
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
 }
 /* Full-height guide cards */
 .content-screen:not(.vision-screen) {
@@ -1892,11 +2021,9 @@ a:focus-visible {
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
-
 .content-screen:not(.vision-screen):not(.routes-screen) .place-image {
   height: 158px;
 }
-
 
 .content-screen:not(.vision-screen):not(.routes-screen) .place-body {
   padding: 16px 17px 15px;
@@ -2028,11 +2155,15 @@ a:focus-visible {
   text-rendering: optimizeLegibility;
 }
 
-.eyebrow { font-size: 14px; }
+.eyebrow {
+  font-size: 14px;
+}
 .live-stats span,
 .section-label,
 .story-copy small,
-.story-copy b { font-size: 14px; }
+.story-copy b {
+  font-size: 14px;
+}
 .story-copy > span {
   color: #d5e1e3;
   font-size: 16px;
@@ -2042,7 +2173,9 @@ a:focus-visible {
   color: rgba(229, 240, 241, 0.8);
   font-size: 12px;
 }
-.screen-heading h2 span { font-size: 18px; }
+.screen-heading h2 span {
+  font-size: 18px;
+}
 
 .filter-row button {
   min-height: 44px;
@@ -2058,7 +2191,9 @@ a:focus-visible {
 .content-screen:not(.vision-screen):not(.routes-screen) .place-body {
   padding: 13px 17px 10px;
 }
-.place-body strong { font-size: 20px; }
+.place-body strong {
+  font-size: 20px;
+}
 .content-screen:not(.vision-screen):not(.routes-screen) .place-body > span {
   height: 54px;
   color: #c5d3d6;
@@ -2070,10 +2205,14 @@ a:focus-visible {
   padding-top: 8px;
   font-size: 15px;
 }
-.page-controls span { font-size: 14px; }
+.page-controls span {
+  font-size: 14px;
+}
 
 .route-time,
-.route-body > small { font-size: 14px; }
+.route-body > small {
+  font-size: 14px;
+}
 .routes-screen .route-body > small {
   height: 22px;
   line-height: 22px;
@@ -2084,12 +2223,16 @@ a:focus-visible {
   font-size: 16px;
   line-height: 1.6;
 }
-.routes-screen .stop-preview b { font-size: 15px; }
+.routes-screen .stop-preview b {
+  font-size: 15px;
+}
 .stop-preview em {
   color: #aebfc3;
   font-size: 14px;
 }
-.route-link { font-size: 16px; }
+.route-link {
+  font-size: 16px;
+}
 .route-note {
   color: #afc0c4;
   font-size: 14px;
@@ -2100,11 +2243,19 @@ a:focus-visible {
   font-size: 16px;
   line-height: 1.5;
 }
-.vision-options .vision-vote-button { font-size: 16px; }
+.vision-options .vision-vote-button {
+  font-size: 16px;
+}
 .vision-vote-stats small,
-.vision-vote-stats em { font-size: 14px; }
-.collective-score > span { font-size: 14px; }
-.vision-result-copy > small { font-size: 14px; }
+.vision-vote-stats em {
+  font-size: 14px;
+}
+.collective-score > span {
+  font-size: 14px;
+}
+.vision-result-copy > small {
+  font-size: 14px;
+}
 .vision-result-copy p {
   color: #c3d0d3;
   font-size: 16px;
@@ -2130,11 +2281,15 @@ a:focus-visible {
 .bottom-nav button > span {
   align-items: center;
 }
-.bottom-nav strong { font-size: 17px; }
+.bottom-nav strong {
+  font-size: 17px;
+}
 
 .detail-image span,
 .detail-copy dt,
-.detail-copy > a { font-size: 14px; }
+.detail-copy > a {
+  font-size: 14px;
+}
 .detail-description {
   height: 123px;
   max-height: 123px;
@@ -2143,27 +2298,41 @@ a:focus-visible {
   font-size: 18px;
   line-height: 1.7;
 }
-.detail-copy dd { font-size: 15px; }
+.detail-copy dd {
+  font-size: 15px;
+}
 .detail-source,
 .route-detail-source {
   color: #a2b3b7;
   font-size: 12px;
 }
-.route-detail-heading > span { font-size: 14px; }
+.route-detail-heading > span {
+  font-size: 14px;
+}
 .route-detail-heading p {
   color: #cad6d9;
   font-size: 16px;
   line-height: 1.7;
 }
-.route-detail-heading b { font-size: 16px; }
-.stop-index { font-size: 14px; }
-.route-stops strong { font-size: 16px; }
+.route-detail-heading b {
+  font-size: 16px;
+}
+.stop-index {
+  font-size: 14px;
+}
+.route-stops strong {
+  font-size: 16px;
+}
 .route-stops small {
   color: #afbec2;
   font-size: 13px;
 }
-.qr-takeaway strong { font-size: 16px; }
-.qr-takeaway span { font-size: 15px; }
+.qr-takeaway strong {
+  font-size: 16px;
+}
+.qr-takeaway span {
+  font-size: 15px;
+}
 .qr-takeaway small {
   color: #a3b5b9;
   font-size: 14px;
